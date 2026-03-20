@@ -1,4 +1,11 @@
+include .env
+export
 
-env-up
+export PROJECT_ROOT=$(shell pwd)
 
+
+env-up:
 	docker compose up  todoapp-postgres
+
+env-down:
+	docker compose down todoapp-postgres
